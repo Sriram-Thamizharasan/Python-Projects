@@ -7,6 +7,7 @@ PLAYER_1_SCORE = 0
 PLAYER_2_SCORE = 0
 POSITIONS = ((0, 315), (0, 285), (0, 0))
 BALL_HEADING = [10, 170, 350, 190]
+BALL_COLORS = ['grey', 'white', 'purple', 'red', 'navy', 'lightgreen', 'gold', 'skyblue']
 
 # Paddle
 
@@ -52,6 +53,7 @@ class Ball(Turtle):
 
     def bouncing_from_paddle(self):
         heading = self.heading()
+        self.color(random.choice(BALL_COLORS))
         self.setheading(170 - heading)
         self.forward(60)
 
